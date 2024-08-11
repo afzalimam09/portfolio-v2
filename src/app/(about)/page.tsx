@@ -17,7 +17,7 @@ const About = () => {
 
             <section className="about-text">
                 <p>
-                    I'm Full Stack Web Developer from Bengaluru, Karnatka,
+                    I&apos;m Full Stack Web Developer from Bengaluru, Karnatka,
                     India, completed B-Tech in Computer Science from KIST
                     College, Bhubaneshwar, Odisha in 2023.
                 </p>
@@ -44,7 +44,7 @@ const About = () => {
             </section>
 
             <section className="service">
-                <h3 className="h3 service-title">What i'm doing</h3>
+                <h3 className="h3 service-title">What i&apos;m doing</h3>
 
                 <ul className="service-list">
                     {serviceList.map((item: any) => (
