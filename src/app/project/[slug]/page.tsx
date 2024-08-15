@@ -1,18 +1,14 @@
-"use client";
-
-import { BiArrowBack } from "react-icons/bi";
+import BackButton from "@/components/BackButton";
 import { portfolio } from "@/constants";
-import { useParams } from "next/navigation";
-import { useRouter } from "next/navigation";
 
-const SingleProject = () => {
-    const { slug } = useParams();
-
-    const router = useRouter();
-
-    const handleBack = () => {
-        router.back();
+interface Params {
+    params: {
+        slug: string;
     };
+}
+
+const SingleProject = ({ params }: Params) => {
+    const { slug } = params;
 
     // Ensure slug is always a string
     const slugString = Array.isArray(slug) ? slug[0] : slug || "";
@@ -24,9 +20,7 @@ const SingleProject = () => {
     return (
         <article className="single">
             <header>
-                <button onClick={handleBack} className="h2 article-title">
-                    <BiArrowBack />
-                </button>
+                <BackButton />
                 <h3 className="h3">{project.name || "Project Name"}</h3>
             </header>
             <section>

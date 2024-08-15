@@ -1,5 +1,6 @@
 // import { MdClose } from "react-icons/md";
 import { serviceList } from "@/constants";
+import Image from "next/image";
 
 const About = () => {
     // const [modal, setModal] = useState(testimonials[0]);
@@ -50,10 +51,11 @@ const About = () => {
                     {serviceList.map((item: any) => (
                         <li key={item.id} className="service-item">
                             <div className="service-icon-box">
-                                <img
+                                <Image
                                     src={item.image}
                                     alt="Web development icon"
                                     width="40"
+                                    height="40"
                                 />
                             </div>
 
